@@ -12,7 +12,7 @@
           <pre><code >{{vbind}}</code></pre>
         </template>
         <template v-slot:example-result>
-          <a :href="url">MCP Admin</a>
+          <a :href="url">Google</a>
         </template>
       </code-example>
       <code-example class="mt-4">
@@ -69,7 +69,7 @@ export default {
   data() {
     return {
       counter: 0,
-      url: "https://mcpadmin.azurewebsites.net/",
+      url: "https://www.google.com/",
       vbind: `<!-- full syntax -->
 <a v-bind:href="url"></a>
 <!-- shorthand -->
