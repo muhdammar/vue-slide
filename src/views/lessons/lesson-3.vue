@@ -7,7 +7,14 @@
     <template v-slot:content>
       <code-example>
         <template v-slot:title>Data </template>
-        <template v-slot:subtitle> </template>
+        <template v-slot:subtitle>
+          In this example, we already used Conditionals and Loops which v-if and
+          v-for.
+          <li>
+            v-if: use to show/hide a DOM element when the expression meet.
+          </li>
+          <li>v-for: use to loop an array.</li>
+        </template>
         <template v-slot:example-code>
           <div class="line-number">
             <pre class="language-css"><code>{{template[0].data}}
