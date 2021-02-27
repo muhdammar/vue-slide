@@ -111,7 +111,10 @@
       </references>
     </template>
     <template v-slot:footer>
-      <navigation-button previous="/about" next="/about"></navigation-button>
+      <navigation-button
+        previous="/lesson-4"
+        next="/lesson-6"
+      ></navigation-button>
     </template>
   </base-layout>
 </template>

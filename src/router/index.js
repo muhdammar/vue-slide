@@ -61,6 +61,33 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/lessons/lesson-5.vue"),
   },
+  {
+    path: "/lesson-6",
+    name: "lesson-6",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/lessons/lesson-6.vue"),
+  },
+  {
+    path: "/lesson-7",
+    name: "lesson-7",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/lessons/lesson-7.vue"),
+  },
+  {
+    path: "/lesson-8",
+    name: "lesson-8",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/lessons/lesson-8.vue"),
+  },
 ];
 
 const router = createRouter({

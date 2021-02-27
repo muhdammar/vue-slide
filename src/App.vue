@@ -25,4 +25,9 @@
     }
   }
 }
+.active {
+  border: 5px solid blue;
+  margin-bottom: 1rem;
+  font-family: "Courier New", Courier, monospace;
+}
 </style>
