@@ -6,28 +6,33 @@
     <template v-slot:subtitle> </template>
     <template v-slot:content>
       <code-example class="mt-4">
-        <template v-slot:title>Attributes </template>
+        <template v-slot:title>Getting Started </template>
         <template v-slot:subtitle>
-          Bind attribute to the element using v-bind</template
-        >
+          <div class="content">
+            <p>
+              Vuex is one of the most important element in Vue. Without it, our
+              applications are hard to mantain and scale up. For my opinion,
+              understanding basic concepts of state management (Vuex) are
+              mandatory when build a large application.
+            </p>
+            <ul>
+              <li>The concept quite complex for beginners</li>
+              <li>The best way to learn is to practice by your own</li>
+            </ul>
+            <iframe
+              width="100%"
+              height="500"
+              src="https://www.youtube.com/embed/_2_C9j-8CtM"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe></div
+        ></template>
         <template v-slot:example-code>
-          <pre><code class="handlebars">{{vBindExample}}</code></pre>
+          <pre><code class="handlebars">{{vuexExample}}</code></pre>
         </template>
         <template v-slot:example-result>
           Output
-          <div v-bind:id="dynamicId"></div>
-          <button
-            class="button is-primary mr-1"
-            v-bind:disabled="isButtonDisabled"
-          >
-            Button
-          </button>
-          <button
-            class="button is-success"
-            @click="isButtonDisabled = !isButtonDisabled"
-          >
-            Toggle button
-          </button>
         </template>
       </code-example>
     </template>
@@ -45,7 +50,7 @@ export default {
   components: { CodeExample },
   data() {
     return {
-      msg: "Hello World",
+      vuexExample: "Nothing",
     };
   },
 };

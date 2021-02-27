@@ -1,7 +1,7 @@
 <template>
   <div class="tabs is-toggle is-fullwidth mb-6">
     <ul>
-      <li>
+      <li v-if="!isHome">
         <router-link :to="previous">
           <span class="icon is-small"
             ><i class="fas fa-film" aria-hidden="true"></i
@@ -22,7 +22,7 @@
 </template>
 <script>
 export default {
-  props: ["previous", "next"],
+  props: ["previous", "next", "isHome"],
   name: "NavigationButton",
 };
 </script>

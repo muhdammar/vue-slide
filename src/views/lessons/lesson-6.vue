@@ -42,7 +42,12 @@
           <pre><code class="handlebars">{{complexExample}}</code></pre>
         </template>
         <template v-slot:example-result>
-          Output
+          <div class="is-clearfix">
+            <p class="is-pulled-left">
+              Output
+            </p>
+            <p class="is-pulled-right">{{ selectedList }}/{{ lists.length }}</p>
+          </div>
           <simple-list
             v-for="list in lists"
             :key="list.id"
@@ -76,6 +81,11 @@ export default {
       let item = this.lists.find((x) => x.id === id);
       item.selected = !item.selected;
       console.log(item);
+    },
+  },
+  computed: {
+    selectedList() {
+      return this.lists.filter((x) => x.selected == true).length;
     },
   },
   mounted() {},

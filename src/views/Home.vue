@@ -56,7 +56,11 @@
       </div>
     </template>
     <template v-slot:footer>
-      <navigation-button previous="/" next="/about"></navigation-button>
+      <navigation-button
+        :isHome="true"
+        previous="/"
+        next="/about"
+      ></navigation-button>
     </template>
   </base-layout>
 </template>
