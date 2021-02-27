@@ -75,6 +75,40 @@
           <todo-button> Delete this {{ item.name }} </todo-button>
         </template>
       </code-example>
+      <code-example class="mt-4">
+        <template v-slot:title>Slots </template>
+        <template v-slot:subtitle>3# Fallback Content </template>
+        <template v-slot:example-code>
+          <pre><code class="handlebars">{{fallbackContent}}</code></pre>
+        </template>
+        <template v-slot:example-result>
+          <h1 class="title is-3">Output</h1>
+          <TodoButtonFallbackContent
+            class="button is-primary"
+          ></TodoButtonFallbackContent>
+          <TodoButtonFallbackContent class="button is-primary ml-1">
+            Hi, i override Fallback content
+          </TodoButtonFallbackContent>
+        </template>
+      </code-example>
+      <references>
+        <template v-slot:title>References </template>
+        <template v-slot:subtitle
+          >Some important notes are not covered here.
+        </template>
+        <template v-slot:content>
+          <ol>
+            <li>Named Slot</li>
+            <li>Dynamic Slot</li>
+            <li>Provide/Inject</li>
+            <li>Others</li>
+          </ol>
+          p/s: Must read all this if got free time really recommended
+          <a href="https://v3.vuejs.org/guide/component-slots.html"
+            ><p>References link</p></a
+          >
+        </template>
+      </references>
     </template>
     <template v-slot:footer>
       <navigation-button previous="/about" next="/about"></navigation-button>
@@ -85,8 +119,14 @@
 import CodeExample from "../../components/UI/CodeExample";
 import TodoButton from "../../components/UI/TodoButton";
 import TodoButtonNoSlot from "../../components/UI/TodoButtonNoSlot";
+import TodoButtonFallbackContent from "../../components/UI/TodoButtonFallbackContent";
 export default {
-  components: { CodeExample, TodoButton, TodoButtonNoSlot },
+  components: {
+    CodeExample,
+    TodoButton,
+    TodoButtonNoSlot,
+    TodoButtonFallbackContent,
+  },
   data() {
     return {
       componentExample: `//File: main.js
@@ -159,6 +199,19 @@ data(){
   }
 }
 ...
+`,
+      fallbackContent: `
+//TodoButtonFallbackContent.vue
+<template>
+  <button class="btn-primary">
+    <slot>Hi im fallback content</slot> //If got nothing provide to slot, it will show by default
+  </button>
+</template>
+
+<TodoButtonFallbackContent></TodoButtonFallbackContent>
+<TodoButtonFallbackContent>
+  Hi, i override Fallback content
+</TodoButtonFallbackContent>
 `,
       item: { name: "Todo Button" },
     };
