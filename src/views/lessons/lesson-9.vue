@@ -38,7 +38,7 @@
     <template v-slot:footer>
       <navigation-button
         previous="/lesson-8"
-        next="/lesson-10"
+        next="/thank-you"
       ></navigation-button>
     </template>
   </base-layout>

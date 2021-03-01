@@ -9,7 +9,7 @@
           <span>Previous</span>
         </router-link>
       </li>
-      <li>
+      <li v-if="!isEnd">
         <router-link :to="next">
           <span class="icon is-small"
             ><i class="far fa-file-alt" aria-hidden="true"></i
@@ -22,7 +22,7 @@
 </template>
 <script>
 export default {
-  props: ["previous", "next", "isHome"],
+  props: ["previous", "next", "isHome", "isEnd"],
   name: "NavigationButton",
 };
 </script>
