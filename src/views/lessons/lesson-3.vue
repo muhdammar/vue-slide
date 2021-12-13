@@ -34,7 +34,7 @@
               <input
                 class="input mt-1"
                 type="text"
-                v-model="task"
+                v-model.trim="task"
                 placeholder="Task name"
               />
             </div>

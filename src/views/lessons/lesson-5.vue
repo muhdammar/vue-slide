@@ -51,8 +51,7 @@
         </template>
         <template v-slot:example-result>
           <h1 class="title is-3">Output</h1>
-          <TodoButton class="button is-primary">Todo Button</TodoButton><br />
-
+          <TodoButton class="button is-primary">Todo Button 1</TodoButton><br />
           <div>
             <TodoButtonNoSlot class="button is-primary mt-1"
               >Todo Button No Slot 2</TodoButtonNoSlot
@@ -83,9 +82,8 @@
         </template>
         <template v-slot:example-result>
           <h1 class="title is-3">Output</h1>
-          <TodoButtonFallbackContent
-            class="button is-primary"
-          ></TodoButtonFallbackContent>
+          <TodoButtonFallbackContent class="button is-primary">
+          </TodoButtonFallbackContent>
           <TodoButtonFallbackContent class="button is-primary ml-1">
             Hi, i override Fallback content
           </TodoButtonFallbackContent>

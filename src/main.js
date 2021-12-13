@@ -5,7 +5,6 @@ import NavigationButton from "./components/UI/NavigationButton.vue";
 import References from "./components/UI/References.vue";
 import router from "./router";
 import store from "./store";
-
 require("@/assets/main.scss");
 const app = createApp(App);
 app.component("BaseLayout", BaseLayout);

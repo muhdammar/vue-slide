@@ -22,8 +22,8 @@
           <pre><code class="handlebars">{{von}}</code></pre>
         </template>
         <template v-slot:example-result>
-          <button @click="doMethod" class="button is-primary">
-            Add 1 to counter
+          <button @click="doMethod(2)" class="button is-primary">
+            Add 2 to counter
           </button>
           <div class="p-1 mt-5">Count: {{ counter }}</div>
         </template>
@@ -59,8 +59,8 @@ import CodeExample from "../../components/UI/CodeExample";
 export default {
   components: { CodeExample },
   methods: {
-    doMethod() {
-      this.counter++;
+    doMethod(number) {
+      this.counter = this.counter + number;
     },
     onSubmit() {
       alert("You hit me up! Nice!");
